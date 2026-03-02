@@ -8,5 +8,4 @@ export XWIKI_PRO_VERSION=13.13.4
 export DRAWIO_VERSION=1.22.11
 
 ./gen_pom.py
-mvn clean install -U
-#mvn clean package -U && mvn install -U
+mvn clean package -U && mvn install -U
