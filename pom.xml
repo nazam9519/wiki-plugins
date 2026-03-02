@@ -57,5 +57,6 @@
     <module>xwiki-s3-blobstore-xip</module>
     <module>confluence-migration-package-xip</module>
     <module>jira-macro-xip</module>
+    <module>application-diagram-xip</module>
   </modules>
 </project>
