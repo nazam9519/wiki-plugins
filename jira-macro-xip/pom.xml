@@ -32,6 +32,13 @@
     <pluginManagement>
       <plugins>
         <plugin>
+         <groupId>com.mycila</groupId>
+         <artifactId>license-maven-plugin</artifactId>
+         <configuration>
+          <skip>true</skip>
+         </configuration>
+        </plugin>
+        <plugin>
           <groupId>org.xwiki.commons</groupId>
           <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
           <version>${env.XWIKI_VERSION}</version>
