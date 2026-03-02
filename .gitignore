@@ -9,3 +9,4 @@ xip/
 **/pom.xml
 !**/gen_pom.xml
 .venv/
+pombk.xml

@@ -5,11 +5,6 @@
     <artifactId>jira-macro</artifactId>
     <version>{{ jira_version }}</version>
   </parent>
-  <!-- <parent>
-    <groupId>org.bb.xwiki.plugins</groupId>
-    <artifactId>xwiki-plugins</artifactId>
-    <version>${revision}</version>
-  </parent> -->
   <artifactId>jira-macro-xip</artifactId>
   <name>JIRA - Macro - XIP</name>
   <packaging>xip</packaging>
