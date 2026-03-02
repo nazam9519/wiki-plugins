@@ -59,4 +59,36 @@
     <module>jira-macro-xip</module>
     <module>application-diagram-xip</module>
   </modules>
+  <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+      <version>3.1.0</version>
+      <executions>
+        <execution>
+          <id>collect-xips</id>
+          <phase>install</phase>
+          <goals>
+            <goal>run</goal>
+          </goals>
+          <configuration>
+            <target>
+
+              <!-- destination directory -->
+              <mkdir dir="${project.basedir}/xip"/>
+
+              <!-- copy all xips from all modules -->
+              <copy todir="${project.basedir}/xip" flatten="true">
+                <fileset dir="${project.basedir}">
+                  <include name="**/target/*.xip"/>
+                </fileset>
+              </copy>
+
+            </target>
+          </configuration>
+        </execution>
+      </executions>
+        </plugin>
+    </plugins>
+  </build>
 </project>

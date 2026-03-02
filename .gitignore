@@ -2,3 +2,5 @@ target/
 op.txt
 deps.txt
 .bbnvm/
+xip/
+*.xip
