@@ -25,7 +25,7 @@
   <parent>
     <groupId>com.xwiki.diagram</groupId>
     <artifactId>application-diagram-parent</artifactId>
-    <version>1.22.11</version>
+    <version>{{ drawio_version }}</version>
   </parent>
 
   <artifactId>application-diagram-xip</artifactId>
@@ -48,14 +48,14 @@
         <plugin>
           <groupId>org.xwiki.commons</groupId>
           <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-          <version>${env.XWIKI_VERSION}</version>
+          <version>{{ xwiki_version }}</version>
           <configuration>
             <coreExtensions>
               <!-- We exclude what is already in the WAR. -->
               <coreExtension>
                 <groupId>org.xwiki.platform</groupId>
                 <artifactId>xwiki-platform-distribution-war-dependencies</artifactId>
-                <version>${env.XWIKI_VERSION}</version>
+                <version>{{ xwiki_version }}</version>
                 <type>pom</type>
               </coreExtension>
             </coreExtensions>
@@ -68,7 +68,7 @@
       <extension>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-        <version>${env.XWIKI_VERSION}</version>
+        <version>{{ xwiki_version }}</version>
       </extension>
     </extensions>
   </build>
