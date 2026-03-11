@@ -22,11 +22,11 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.bb.xwiki.plugins</groupId>
-    <artifactId>xwiki-plugins</artifactId>
-    <version>${revision}</version>
-  </parent>
+   <parent>
+    <groupId>org.xwiki.platform</groupId>
+    <artifactId>xwiki-platform-distribution</artifactId>
+    <version>{{ xwiki_version }}</version>
+   </parent>
   <!-- <groupId>org.bb.xwiki.plugins</groupId> -->
   <artifactId>xwiki-s3-blobstore-xip</artifactId>
   <name>XIP Package of All BB xWiki Plugins</name>
@@ -39,7 +39,7 @@
     <dependency>
       <groupId>org.xwiki.commons</groupId>
       <artifactId>xwiki-commons-store-blob-s3</artifactId>
-      <version>${xwiki.version}</version>
+      <version>{{ xwiki_version }}</version>
     </dependency>
   </dependencies>
   <build>
@@ -48,14 +48,14 @@
         <plugin>
           <groupId>org.xwiki.commons</groupId>
           <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-          <version>${xwiki.version}</version>
+          <version>{{ xwiki_version }}</version>
           <configuration>
             <coreExtensions>
               <!-- We exclude what is already in the WAR. -->
               <coreExtension>
                 <groupId>org.xwiki.platform</groupId>
                 <artifactId>xwiki-platform-distribution-war-dependencies</artifactId>
-                <version>${xwiki.version}</version>
+                <version>{{ xwiki_version }}</version>
                 <type>pom</type>
               </coreExtension>
             </coreExtensions>
@@ -76,7 +76,7 @@
       <extension>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-        <version>${xwiki.version}</version>
+        <version>{{ xwiki_version }}</version>
       </extension>
     </extensions>
   </build>
