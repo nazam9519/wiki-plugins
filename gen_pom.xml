@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.xwiki.platform</groupId>
     <artifactId>xwiki-platform-distribution</artifactId>
-    <version>17.10.3</version>
+    <version>{{ xwiki_version }}</version>
   </parent>
   <developers>
     <developer>
@@ -42,9 +42,9 @@
   <description>bb xwiki plugins parent pom</description>
   <properties>
     <revision>1.0</revision>
-    <jira.version>11.1.2</jira.version>
-    <confluence.version>1.0.38</confluence.version>
-    <xwiki.version>17.10.3</xwiki.version>
+    <jira.version>{{ jira_version }}</jira.version>
+    <confluence.version>{{ confluence_version }}</confluence.version>
+    <xwiki.version>{{ xwiki_version }}</xwiki.version>
     <xwiki-pro.version>13.13.4</xwiki-pro.version>
   </properties>
   <modules>

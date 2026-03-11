@@ -9,6 +9,21 @@ def get_template_env(template_path:str) -> Environment:
 def main():
     outfile = "pom.xml"
     cwd = Path.cwd()
+    parent_dir = cwd
+    parent_template = parent_dir / "gen_pom.xml"
+    print(f"{parent_template}")
+    if parent_template.exists():
+        parent_pom = get_template_env(parent_dir).get_template("gen_pom.xml")
+        parent_output = parent_pom.render(
+                drawio_version = DRAWIO_VERSION,
+                xwiki_version = XWIKI_VERSION,
+                jira_version = JIRA_VERSION,
+                confluence_version = CONF_VERSION
+            )
+        parent_outfile = parent_dir / outfile
+        with open(parent_outfile,"w") as parent_pomfile:
+                parent_pomfile.write(parent_output)
+                
     for dir in os.listdir(cwd):
         path = os.path.join(cwd,dir)
         if(os.path.isdir(path) and os.path.exists(f"{path}/gen_pom.xml")):
