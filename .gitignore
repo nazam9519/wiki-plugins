@@ -4,3 +4,9 @@ deps.txt
 .bbnvm/
 xip/
 *.xip
+!/pom.xml
+#!xwiki*/pom.xml
+**/pom.xml
+!**/gen_pom.xml
+.venv/
+pombk.xml

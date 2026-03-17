@@ -3,13 +3,8 @@
   <parent>
     <groupId>org.xwiki.contrib.jira</groupId>
     <artifactId>jira-macro</artifactId>
-    <version>11.1.2</version>
+    <version>{{ jira_version }}</version>
   </parent>
-  <!-- <parent>
-    <groupId>org.bb.xwiki.plugins</groupId>
-    <artifactId>xwiki-plugins</artifactId>
-    <version>${revision}</version>
-  </parent> -->
   <artifactId>jira-macro-xip</artifactId>
   <name>JIRA - Macro - XIP</name>
   <packaging>xip</packaging>
@@ -26,7 +21,7 @@
     <extension>
       <groupId>org.xwiki.commons</groupId>
       <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-      <version>${env.XWIKI_VERSION}</version>
+      <version>{{ xwiki_version }}</version>
     </extension>
   </extensions>
     <pluginManagement>
@@ -41,14 +36,14 @@
         <plugin>
           <groupId>org.xwiki.commons</groupId>
           <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-          <version>${env.XWIKI_VERSION}</version>
+          <version>{{ xwiki_version }}</version>
           <configuration>
             <coreExtensions>
               <!-- We exclude what is already in the WAR -->
               <coreExtension>
                 <groupId>org.xwiki.platform</groupId>
                 <artifactId>xwiki-platform-distribution-war-dependencies</artifactId>
-                <version>${env.XWIKI_VERSION}</version>
+                <version>{{ xwiki_version }}</version>
                 <type>pom</type>
               </coreExtension>
             </coreExtensions>

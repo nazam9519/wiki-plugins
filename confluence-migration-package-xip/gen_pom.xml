@@ -25,7 +25,7 @@
   <parent>
     <groupId>com.xwiki.confluence</groupId>
     <artifactId>confluence-migration-package</artifactId>
-    <version>1.0.38</version>
+    <version>{{ confluence_version }}</version>
   </parent>
   <!-- <parent>
     <groupId>org.bb.xwiki.plugins</groupId>
@@ -40,14 +40,14 @@
     <dependency>
       <groupId>com.xwiki.pro</groupId>
       <artifactId>xwiki-pro-package</artifactId>
-      <version>13.13.4</version>
+      <version>${xwiki-pro.version}</version>
       <type>xar</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.xwiki.confluence</groupId>
       <artifactId>confluence-migration-package-ui</artifactId>
-      <version>1.0.38</version>
+      <version>{{ confluence_version }}</version>
       <type>xar</type>
       <scope>provided</scope>
     </dependency>
@@ -58,14 +58,14 @@
         <plugin>
           <groupId>org.xwiki.commons</groupId>
           <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-          <version>18.0.1</version>
+          <version>{{ xwiki_version }}</version>
           <configuration>
             <coreExtensions>
               <!-- We exclude what is already in the WAR. -->
               <coreExtension>
                 <groupId>org.xwiki.platform</groupId>
                 <artifactId>xwiki-platform-distribution-war-dependencies</artifactId>
-                <version>${platform.version}</version>
+                <version>{{ xwiki_version }}</version>
                 <type>pom</type>
               </coreExtension>
             </coreExtensions>
@@ -86,7 +86,7 @@
       <extension>
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-extension-plugin</artifactId>
-        <version>18.0.1</version>
+        <version>{{ xwiki_version }}</version>
       </extension>
     </extensions>
   </build>
